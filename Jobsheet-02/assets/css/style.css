@@ -1,3 +1,4 @@
+/*reset and body*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,4 +17,49 @@ a{
 }
 a:hover{
     text-decoration: underline;
+}
+
+/* header and navbar(flexbox)*/
+
+header{
+background-color: #1d5b8a;
+color: #fff;
+padding: 1rem 1.5rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+fixed-wrap: wrap;
+}
+
+header h1{
+font-size: 1.4rem;
+
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+header nav a{
+    color: #fff;
+    font-weight: 500;
+}
+/*main layout*/
+main{
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+section{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+section h2{
+    margin-bottom: 1rem;
+    color: #1d5b8a;
+
 }
