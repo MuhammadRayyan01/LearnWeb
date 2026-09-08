@@ -63,3 +63,26 @@ section h2{
     color: #1d5b8a;
 
 }
+/*kartu statistik */
+main section:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+main section:nth-of-type(2)article{
+    background-color: #eef4fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+main section:nth-of-type(2) article h3{
+    font-size: 0.95rem;
+    color: #55677a;
+    margin-bottom: 0.5rem;
+}
+main section:nth-of-type(2) article p{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1d5b8a;
+    
+}
