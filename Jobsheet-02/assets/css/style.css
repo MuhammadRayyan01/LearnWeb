@@ -93,16 +93,19 @@ border-collapse: collapse;
 }
 
 th, td {
-text-align: left; padding: 0.65rem 0.75rem;
+text-align: left; 
+padding: 0.65rem 0.75rem;
 border-bottom: 1px solid #e2e6ea;
 }
 
 
 thead {
-background-color: #1d5b8a; color: #fff;
+background-color: #1d5b8a; 
+color: #fff;
 }
 
-tbody tr:nth-child(even) { background-color: #f7f9fb;
+tbody tr:nth-child(even) { 
+    background-color: #f7f9fb;
 }
 
 tbody tr:hover {
@@ -110,40 +113,46 @@ background-color: #eef4fa;
 }
 
 td button {
-padding: 0.35rem 0.7rem; margin-right: 0.35rem; border: none;
-border-radius: 4px; cursor: pointer; font-size: 0.85rem;
+padding: 0.35rem 0.7rem; 
+margin-right: 0.35rem; border: none;
+border-radius: 4px; cursor: pointer; 
+font-size: 0.85rem;
 }
 
-td button:first-of-type { background-color: #f0ad4e; color: #fff;
+td button:first-of-type { 
+    background-color: #f0ad4e; color: #fff;
 }
 
 
-td button:last-of-type { background-color: #d9534f; color: #fff;
+td button:last-of-type { 
+    background-color: #d9534f; color: #fff;
 }
 
 /*form*/
 form p {
-margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 form label {
-display: block;
-margin-bottom: 0.35rem; font-weight: 600;
-color: #444;
+    display: block;
+    margin-bottom: 0.35rem; font-weight: 600;
+    color: #444;
 }
 
 
 form input, form select {
-width: 100%;
-max-width: 400px; padding: 0.55rem 0.7rem; border: 1px solid #cdd4da; border-radius: 4px;
-font-size: 1rem;
+    width: 100%;
+    max-width: 400px; padding: 0.55rem 0.7rem; border: 1px solid #cdd4da; border-radius: 4px;
+    font-size: 1rem;
 }
 
-form button[type="submit"] { background-color: #1d5b8a; color: #fff;
-border: none;
-padding: 0.6rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer;
+form button[type="submit"] { 
+    background-color: #1d5b8a; color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer;
 }
 
 
-form button[type="submit"]:hover { background-color: #164869;
+form button[type="submit"]:hover { 
+    background-color: #164869;
 }
