@@ -156,3 +156,10 @@ form button[type="submit"] {
 form button[type="submit"]:hover { 
     background-color: #164869;
 }
+/*footer*/
+footer {
+    text-align: center;
+    padding: 1.25rem; 
+    color: #7a8794; 
+    font-size: 0.9rem;
+}
