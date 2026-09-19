@@ -30,7 +30,7 @@ padding: 1rem 1.5rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
-fixed-wrap: wrap;
+flex-wrap: wrap;
 }
 
 header h1{
@@ -223,7 +223,8 @@ overflow-x: auto;
     order: 3;
     margin-top: 1rem;
     }
-    .nav-toggle:checked ~ nav {
+    
+    header nav.nav-open{
     display: block;
     }
     header nav ul {
@@ -232,3 +233,23 @@ overflow-x: auto;
     }
 }
 
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+}
