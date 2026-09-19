@@ -37,3 +37,36 @@ function initTableFilter() {
         });
     });
 }
+
+// ===== Validasi form (client-side) =====
+function tampilkanError(input, pesan) {
+    hapusError(input);
+    const span = document.createElement("span");
+    span.className = "error";
+    span.textContent = pesan;
+    input.insertAdjacentElement("afterend", span);
+}
+function hapusError(input) {
+    const next = input.nextElementSibling;
+    if (next && next.classList.contains("error")) {
+        next.remove();
+    }
+}
+function initValidasiForm() {
+    const form = document.getElementById("form-tambah");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+        let valid = true;
+        const judul = form.querySelector("[name='judul'], [name='nama']");
+        if (judul && judul.value.trim() === "") {
+            tampilkanError(judul, "Field ini wajib diisi.");
+            valid = false;
+        } else if (judul) {
+            hapusError(judul);
+        }
+        // ...(pengecekan pengarang, tahun, stok dengan pola serupa)...
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+}
