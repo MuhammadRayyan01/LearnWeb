@@ -1,4 +1,4 @@
-/*reset and body*/
+                    /*reset and body*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +19,9 @@ a:hover{
     text-decoration: underline;
 }
 
-/* header and navbar(flexbox)*/
+
+
+                        /* header and navbar(flexbox)*/
 
 header{
 background-color: #1d5b8a;
@@ -45,7 +47,10 @@ header nav a{
     color: #fff;
     font-weight: 500;
 }
-/*main layout*/
+
+
+
+                    /*main layout*/
 main{
     max-width: 1000px;
     margin: 2rem auto;
@@ -63,7 +68,9 @@ section h2{
     color: #1d5b8a;
 
 }
-/*kartu statistik */
+
+
+                    /*kartu statistik */
 main section:nth-of-type(2){
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -86,7 +93,9 @@ main section:nth-of-type(2) article p{
     color: #1d5b8a;
 
 }
-/*table*/
+
+
+                    /*table*/
 table {
 width: 100%;
 border-collapse: collapse;
@@ -128,7 +137,9 @@ td button:last-of-type {
     background-color: #d9534f; color: #fff;
 }
 
-/*form*/
+
+
+                    /*form*/
 form p {
     margin-bottom: 1rem;
 }
@@ -156,7 +167,10 @@ form button[type="submit"] {
 form button[type="submit"]:hover { 
     background-color: #164869;
 }
-/*footer*/
+
+
+
+                    /*footer*/
 footer {
     text-align: center;
     padding: 1.25rem; 
@@ -164,31 +178,38 @@ footer {
     font-size: 0.9rem;
 }
 
-/*responsive breakpoint*/
+
+
+                    /*responsive breakpoint*/
 
 @media (max-width: 768px) {
 main section:nth-of-type(2) {
 grid-template-columns: repeat(2, 1fr);
 }
 }
-/* ===== Hamburger Menu (checkbox hack) ===== */
-.nav-toggle {
-display: none;
-}
+
+
+                    /* ===== Hamburger Menu (checkbox hack) ===== */
 
 .nav-toggle-label {
 display: none;
 font-size: 1.6rem;
 color: #fff;
+background: none;
+border: none;
 cursor: pointer;
 }
 
-/* ===== Tabel Responsif ===== */
+
+
+                    /* ===== Tabel Responsif ===== */
 .table-responsive {
 overflow-x: auto;
 }
 
-/*media query css*/
+
+
+                    /*media query css*/
 @media (max-width: 480px) {
     header {
     position: relative;
