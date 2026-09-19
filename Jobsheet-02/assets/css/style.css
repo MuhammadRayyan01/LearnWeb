@@ -171,6 +171,22 @@ main section:nth-of-type(2) {
 grid-template-columns: repeat(2, 1fr);
 }
 }
+/* ===== Hamburger Menu (checkbox hack) ===== */
+.nav-toggle {
+display: none;
+}
+
+.nav-toggle-label {
+display: none;
+font-size: 1.6rem;
+color: #fff;
+cursor: pointer;
+}
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+overflow-x: auto;
+}
 
 /*media query css*/
 @media (max-width: 480px) {
@@ -195,19 +211,3 @@ grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ===== Hamburger Menu (checkbox hack) ===== */
-.nav-toggle {
-display: none;
-}
-
-.nav-toggle-label {
-display: none;
-font-size: 1.6rem;
-color: #fff;
-cursor: pointer;
-}
-
-/* ===== Tabel Responsif ===== */
-.table-responsive {
-overflow-x: auto;
-}
