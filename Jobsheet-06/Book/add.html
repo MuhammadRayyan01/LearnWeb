@@ -1,0 +1,61 @@
+<! DOCTYPE html>
+<html lang="id">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMPUS-Mini | Home</title>
+    <link rel="stylesheet" href="../../Jobsheet-02/assets/css/style.css">
+</head>
+    <script src="../../Jobsheet-02/assets/js/app.js"></script>
+<body> 
+    <header> 
+         <h1>SIMPUS-Mini</h1> 
+<button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         <nav> 
+             <ul>
+                <li><a href="../index.html">Home</a></li> 
+                <li><a href="list.html">List of Books</a></li> 
+                <li><a href="../Book/add.html">Add Books</a></li>
+                <li><a href="../Member/list.html">Member List</a></li> 
+                <li><a href="../Member/add.html">Add Members</a></li> 
+             </ul> 
+         </nav> 
+    </header>
+</body>
+<form id="form-tambah"> 
+    <p> 
+        <label for="title">Title</label><br> 
+        <input type="text" id="title" name="title" required>
+    </p>
+
+    <p> 
+        <label for="author">Author</label><br> 
+        <input type="text" id="author" name="author" required> 
+    </p>
+
+    <p> 
+        <label for="year">Year</label><br> 
+        <input type="number" id="year" name="year" min="1900" max="2026" required> 
+    </p>
+
+    <p> 
+        <label for="isbn">ISBN</label><br> <input type="text" id="isbn" name="isbn"> 
+    </p>
+
+    <p> 
+        <label for="stock">Stock</label><br> 
+        <input type="number" id="stock" name="stock" min="0" required> 
+    </p>
+
+    <p> 
+        <label for="category">Category</label><br>
+        <select id="category" name="category"> 
+            <option value="fiction">Fiction</option> 
+            <option value="non-fiction">Non-Fiction</option> 
+            <option value="reference"> Reference</option> 
+        </select> 
+    </p>
+
+    <p> 
+        <button type="submit">Save</button> 
+    </p>
+</form>
