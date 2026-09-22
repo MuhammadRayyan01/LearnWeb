@@ -69,6 +69,14 @@ section h2{
 
 }
 
+
+
+                    /*kartu statistik */
+main section:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
 main section:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
@@ -78,26 +86,14 @@ main section:nth-of-type(2) {
 main section:nth-of-type(2) h2 {    
     flex-basis: 100%;
 }
-
 main section:nth-of-type(2) article {
     background-color: #eef4fa;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    flex: 1 1 200px;
+    flex: 1 1 0; /* Allows equal sizing and shrinking */
+    min-width: 140px;
 }
-                    /*kartu statistik */
-/*main section:nth-of-type(2){
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1rem;
-}
-main section:nth-of-type(2)article{
-    background-color: #eef4fa;
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-align: center;
-}*/
 main section:nth-of-type(2) article h3{
     font-size: 0.95rem;
     color: #55677a;
