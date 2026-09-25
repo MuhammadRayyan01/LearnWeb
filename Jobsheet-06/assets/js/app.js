@@ -14,6 +14,7 @@ function initNavToggle() {
 /*Use event delegation in the document because the table row is now
 dynamically rendered via fetch (see buku.js/anggota.js) so that
 The .btn-delete button is not necessarily present when DOMContentLoaded.*/
+
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-delete");
