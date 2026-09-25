@@ -8,7 +8,7 @@ async function loadBookList() {
     try {
         //Simulating network delay so that the loading indicator is visible
         await new Promise((resolve) => setTimeout(resolve, 600));
-        const res = await fetch(".. /data/buku.json");
+        const res = await fetch("../data/book.json");
         if (!res.ok) {
             throw new Error("Failed to retrieve data (status " + res.status + ")");
         }
@@ -19,7 +19,7 @@ async function loadBookList() {
                 "<td>" + book.title + "</td>" +
                 "<td>" + book.author + "</td>" +
                 "<td>" + book.year + "</td>" +
-                "<td>" + buku.stok + "</td>" +
+                "<td>" + book.stock + "</td>" +
                 "<td>" +
                 "<button type=\"button\">Edit</button> " +
                 "<button type=\"button\" class=\"btn-delete\">Delete</button>" +
@@ -33,4 +33,4 @@ async function loadBookList() {
         loading.style.display = "none";
     }
 }
-document.addEventListener("DOMContentLoaded", muatDaftarBuku);
+document.addEventListener("DOMContentLoaded", loadBookList);

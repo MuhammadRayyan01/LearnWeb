@@ -7,7 +7,7 @@ async function loadMemberList() {
     tbody.innerHTML = "";
     try {
         await new Promise((resolve) => setTimeout(resolve, 600));
-        const res = await fetch(".. /data/anggota.json");
+        const res = await fetch("../data/member.json");
         if (!res.ok) {
             throw new Error("Failed to retrieve data (status " + res.status + ")");
         }
@@ -15,10 +15,10 @@ async function loadMemberList() {
         listMember.forEach(function (member) {
             const tr = document.createElement("tr");
             tr.innerHTML =
-                "<td>" + anggota.no_anggota + "</td>" +
+                "<td>" + member.no_anggota + "</td>" +
                 "<td>" + member.name + "</td>" +
                 "<td>" + member.address + "</td>" +
-                "<td>" + anggota.no_hp + "</td>" +
+                "<td>" + member.no_hp + "</td>" +
                 "<td>" +
                 "<button type=\"button\">Edit</button> " +
                 "<button type=\"button\" class=\"btn-delete\">Delete</button>" +
@@ -32,4 +32,4 @@ async function loadMemberList() {
         loading.style.display = "none";
     }
 }
-document.addEventListener("DOMContentLoaded", muatDaftarAnggota);
+document.addEventListener("DOMContentLoaded", loadMemberList);
