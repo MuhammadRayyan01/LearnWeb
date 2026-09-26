@@ -28,29 +28,7 @@ $base = $__rel === '' ? '' : str_repeat('.. /', substr_count($__rel, '/') + 1);
             </ul>
         </nav>
     </header>
-    <main>
-<?php
-$page_title = "Home";
-include __DIR__ . '/includes/header.php';
-?>
-      
-        <h2>Welcome to the Mini SIMPUS </h2 Library System>
-        <section>
-            <p>A simple application for managing library book and member data.</p> 
-        </section>
-        <section> 
-            <article> 
-                 <h3>Total Books</h3> 
-                 <p>10</p> 
-            </article> 
-            <article> 
-                 <h3>Total Members</h3> 
-                 <p>4</p> 
-            </article> 
-            <article> 
-                 <h3>Currently Borrowed</h3> 
-                 <p>4</p> 
-            </article> 
-        </section>
-<?php include __DIR__ . '/includes/footer.php'; ?>
+    
+
+
 

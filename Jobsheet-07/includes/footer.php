@@ -1,3 +1,4 @@
+<?php include __DIR__ . '/includes/footer.php'; ?>
 </main>
     <footer>
         <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 7</p>
