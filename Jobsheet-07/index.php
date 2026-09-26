@@ -1,26 +1,18 @@
+<?php
+$page_title = "Home";
+include __DIR__ . '/includes/header.php';
+?>
 <! DOCTYPE html>
 <html lang="id">
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIMPUS-Mini | Home</title>
-    <link rel="stylesheet" href="../Jobsheet-02/assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-    <script src="../Jobsheet-02/assets/js/app.js"></script>
+    <script src="../assets/js/app.js"></script>
 <body> 
-    <header> 
-         <h1>SIMPUS-Mini</h1> 
-         <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-         <nav> 
-             <ul>
-                <li><a href="index.html">Home</a></li> 
-                <li><a href="Book/list.html">List of Books</a></li> 
-                <li><a href="Book/add.html">Add Books</a></li>
-                <li><a href="Member/list.html">Member List</a></li> 
-                <li><a href="Member/add.html">Add Members</a></li> 
-             </ul> 
-         </nav> 
- </header>
+  
 
     <main> 
         <h2>Welcome to the Mini SIMPUS </h2 Library System>
@@ -31,11 +23,11 @@
         <section> 
             <article> 
                  <h3>Total Books</h3> 
-                 <p>12</p> 
+                 <p>10</p> 
             </article> 
             <article> 
                  <h3>Total Members</h3> 
-                 <p>8</p> 
+                 <p>4</p> 
             </article> 
             <article> 
                  <h3>Currently Borrowed</h3> 
@@ -48,4 +40,5 @@
         <p> © 2026 SIMPUS-Mini — Jobsheet 1</p> 
     </footer>
 </body>
+
 </html>

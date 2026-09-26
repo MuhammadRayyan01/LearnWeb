@@ -12,11 +12,11 @@
          <h1>SIMPUS-Mini</h1> 
 <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         <nav> 
              <ul>
-                <li><a href="../index.html">Home</a></li> 
-                <li><a href="../Book/list.html">List of Books</a></li> 
-                <li><a href="../Book/add.html">Add Books</a></li>
-                <li><a href="list.html">Member List</a></li> 
-                <li><a href="add.html">Add Members</a></li> 
+                <li><a href="../index.php">Home</a></li> 
+                <li><a href="../Book/list.php">List of Books</a></li> 
+                <li><a href="../Book/add.php">Add Books</a></li>
+                <li><a href="list.php">Member List</a></li> 
+                <li><a href="add.php">Add Members</a></li> 
              </ul> 
          </nav> 
     </header>
