@@ -1,4 +1,4 @@
-<body! DOCTYPE html>
+<! DOCTYPE html>
 <html lang="id">
 <head> 
     <meta charset="UTF-8">
@@ -7,47 +7,59 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
     <script src="../assets/js/app.js"></script>
-<body> 
-    <header> 
-         <h1>SIMPUS-Mini</h1> 
-<button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         <nav> 
-             <ul>
-                <li><a href="../index.php">Home</a></li> 
-                <li><a href="list.php">List of Books</a></li> 
-                <li><a href="../Book/add.php">Add Books</a></li>
-                <li><a href="../Member/list.php">Member List</a></li> 
-                <li><a href="../Member/add.php">Add Members</a></li> 
-             </ul> 
-         </nav> 
-    </header>
-</body> 
-<div class="table-responsive">
+    
+<?php
+$page_title = "Book List";
+include __DIR__ . '/../includes/header.php';
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);
+$daftarBuku = $_SESSION['book'] ?? [];
+?>
+<section>
+    <h2>Book List</h2>
+    <?php if ($flash): ?>
+        <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
+    <?php endif; ?>
+    
     <div class="search-box">
-        <label for="search-input">Cari Judul Buku</label>
-        <input type="text" id="search-input" placeholder="Ketik judul buku...">
+        <label for="search-input">Search Book Title</label>
+        <input type="text" id="search-input" placeholder="Type book title...">
     </div>
     
-    <p id="loading-indicator" style="display:none;" >Loading data... </p>
-
+    <div class="table-responsive">
         <table>
-            <thead> 
-                <tr> 
-                    <th>Title</th> 
-                    <th>Author</th> 
-                    <th>Year</th> 
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
                     <th>Stock</th>
-                    <th>Aksi</th> 
-                </tr> 
-            </thead> 
-            <tbody> 
-                <!-- Lines are dynamically populated by assets/js/buku.js via fetch('.. /data/buku.json') -->
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Perbaikan: Gunakan $daftarBuku agar sesuai dengan variabel di atas -->
+                <?php if (empty($daftarBuku)): ?>
+                <tr>
+                    <td colspan="5">There is no book data yet. Please add it via the "Add Books" menu.</td>
+                </tr>
+                <?php else: ?>
+                    <!-- Perbaikan: Gunakan kata kunci 'as' -->
+                    <?php foreach ($daftarBuku as $book): ?>
+                    <tr>
+                        <td><?php echo $book['title']; ?></td>
+                        <td><?php echo $book['author']; ?></td>
+                        <td><?php echo $book['year']; ?></td>
+                        <td><?php echo $book['stock']; ?></td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button" class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </tbody>
         </table>
-</div>
-</main>
-    <!-- RIGHT HERE: Script tags placed at the bottom, right before </body> -->
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/book.js"></script>
-</body>
-</html>
-
+    </div>
+</section>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

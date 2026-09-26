@@ -38,7 +38,8 @@
     </p>
 
     <p> 
-        <label for="isbn">ISBN</label><br> <input type="text" id="isbn" name="isbn"> 
+        <label for="isbn">ISBN</label><br> 
+        <input type="text" id="isbn" name="isbn"> 
     </p>
 
     <p> 

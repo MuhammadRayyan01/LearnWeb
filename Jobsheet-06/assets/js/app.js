@@ -45,11 +45,11 @@ function initTableFilter() {
 }
 
 // ===== Validasi form (client-side) =====
-function tampilkanError(input, pesan) {
+function tampilkanError(input, message) {
     hapusError(input);
     const span = document.createElement("span");
     span.className = "error";
-    span.textContent = pesan;
+    span.textContent = message;
     input.insertAdjacentElement("afterend", span);
 }
 function hapusError(input) {
@@ -63,7 +63,7 @@ function initValidasiForm() {
     if (!form) return;
     form.addEventListener("submit", function (e) {
         let valid = true;
-        const judul = form.querySelector("[name='judul'], [name='nama']");
+        const judul = form.querySelector("[name='title'], [name='name']");
         if (judul && judul.value.trim() === "") {
             tampilkanError(judul, "Field ini wajib diisi.");
             valid = false;

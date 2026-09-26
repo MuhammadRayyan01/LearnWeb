@@ -20,11 +20,11 @@ $base = $__rel === '' ? '' : str_repeat('.. /', substr_count($__rel, '/') + 1);
         <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776; </button>
         <nav>
             <ul>
-                <li><a href="<?php echo $base; ?>index.php">Beranda </a></li>
-                <li><a href="<?php echo $base; ?>Book/list.php">Book List </a></li>
-                <li><a href="<?php echo $base; ?>Book/add.php">Add Book </a></li>
-                <li><a href="<?php echo $base; ?>Member/list.php">Member List </a></li>
-                <li><a href="<?php echo $base; ?>Member/add.php">Add Member </a></li>
+                <li><a href="<?php echo $base; ?>../../index.php">Beranda </a></li>
+                <li><a href="<?php echo $base; ?>../../Book/list.php">Book List </a></li>
+                <li><a href="<?php echo $base; ?>../../Book/add.php">Add Book </a></li>
+                <li><a href="<?php echo $base; ?>../../Member/list.php">Member List </a></li>
+                <li><a href="<?php echo $base; ?>../../Member/add.php">Add Member </a></li>
             </ul>
         </nav>
     </header>
