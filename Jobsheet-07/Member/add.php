@@ -11,7 +11,8 @@
 <body> 
     <header> 
          <h1>SIMPUS-Mini</h1> 
-<button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         <nav> 
+<button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         
+        <nav> 
              <ul>
                 <li><a href="../index.php">Home</a></li> 
                 <li><a href="../Book/list.php">List of Books</a></li> 
@@ -21,7 +22,7 @@
              </ul> 
          </nav> 
     </header>
-<form id="form-tambah"> 
+<form id="form-tambah" method="post" action="proses_tambah.php"> 
 <form> 
     <p> 
         <label for="name">Name</label><br> 

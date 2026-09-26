@@ -1,11 +1,14 @@
+<?php if (!empty($extra_scripts)): foreach ($extra_scripts as $src): ?>
+<script src="<?php echo $src; ?>"></script>
+<?php endforeach;
+endif; ?>
+
 <?php
 $page_title = "Home";
 include __DIR__ . '/includes/header.php';
 ?>
 
 <main>
-
-
 <h2>Welcome to the Mini SIMPUS Library System</h2>
 <section>
     <p>A simple application for managing library book and member data.</p> 
@@ -26,5 +29,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
+
+
 
 

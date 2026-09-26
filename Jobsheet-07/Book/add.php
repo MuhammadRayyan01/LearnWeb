@@ -21,7 +21,7 @@
          </nav> 
     </header>
 </body>
-<form id="form-tambah"> 
+<form id="form-tambah" method="post" action="proses_tambah.php"> 
     <p> 
         <label for="title">Title</label><br> 
         <input type="text" id="title" name="title" required>
