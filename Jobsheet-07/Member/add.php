@@ -22,7 +22,7 @@
              </ul> 
          </nav> 
     </header>
-<form id="form-tambah" method="post" action="proses_tambah.php"> 
+<form id="form-plus" method="post" action="proses_add.php"> 
 <form> 
     <p> 
         <label for="name">Name</label><br> 
