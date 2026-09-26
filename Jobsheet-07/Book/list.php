@@ -1,0 +1,53 @@
+<body! DOCTYPE html>
+<html lang="id">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMPUS-Mini | Home</title>
+    <link rel="stylesheet" href="../../Jobsheet-02/assets/css/style.css">
+</head>
+    <script src="../../Jobsheet-02/assets/js/app.js"></script>
+<body> 
+    <header> 
+         <h1>SIMPUS-Mini</h1> 
+<button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         <nav> 
+             <ul>
+                <li><a href="../index.html">Home</a></li> 
+                <li><a href="list.html">List of Books</a></li> 
+                <li><a href="../Book/add.html">Add Books</a></li>
+                <li><a href="../Member/list.html">Member List</a></li> 
+                <li><a href="../Member/add.html">Add Members</a></li> 
+             </ul> 
+         </nav> 
+    </header>
+</body> 
+<div class="table-responsive">
+    <div class="search-box">
+        <label for="search-input">Cari Judul Buku</label>
+        <input type="text" id="search-input" placeholder="Ketik judul buku...">
+    </div>
+    
+    <p id="loading-indicator" style="display:none;" >Loading data... </p>
+
+        <table>
+            <thead> 
+                <tr> 
+                    <th>Title</th> 
+                    <th>Author</th> 
+                    <th>Year</th> 
+                    <th>Stock</th>
+                    <th>Aksi</th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <!-- Lines are dynamically populated by assets/js/buku.js via fetch('.. /data/buku.json') -->
+            </tbody>
+        </table>
+</div>
+</main>
+    <!-- RIGHT HERE: Script tags placed at the bottom, right before </body> -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/book.js"></script>
+</body>
+</html>
+
