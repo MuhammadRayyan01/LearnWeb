@@ -265,3 +265,20 @@ overflow-x: auto;
     border: 1px solid #cdd4da;
     border-radius: 4px;
 }
+
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.75 rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.flash-success {
+    background-color: #d4edda;
+    Color: #155724;
+}
+.flash-error {
+    background-color: #f8d7da;
+    Color: #721c24;
+}
