@@ -1,62 +1,59 @@
-<! DOCTYPE html>
-<html lang="id">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Home</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-    <script src="../assets/js/app.js"></script>
-<body> 
-    <header> 
-         <h1>SIMPUS-Mini</h1> 
-<button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>         <nav> 
-             <ul>
-                <li><a href="../index.php">Home</a></li> 
-                <li><a href="list.php">List of Books</a></li> 
-                <li><a href="../Book/add.php">Add Books</a></li>
-                <li><a href="../Member/list.php">Member List</a></li> 
-                <li><a href="../Member/add.php">Add Members</a></li> 
-             </ul> 
-         </nav> 
-    </header>
-</body>
-<form id="form-plus" method="post" action="proses_add.php"> 
-    <p> 
-        <label for="title">Title</label><br> 
-        <input type="text" id="title" name="title" required>
-    </p>
+<?php
+$page_title = "Add Book";
+include __DIR__ . '/../includes/header.php';
 
-    <p> 
-        <label for="author">Author</label><br> 
-        <input type="text" id="author" name="author" required> 
-    </p>
+// Menangkap flash message (error) dari proses_add.php
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);
+?>
 
-    <p> 
-        <label for="year">Year</label><br> 
-        <input type="number" id="year" name="year" min="1900" max="2026" required> 
-    </p>
+<section>
+    <h2>Add New Book</h2>
+    
+    <!-- Blok ini wajib ada agar pesan error berwarna merah bisa muncul -->
+    <?php if ($flash): ?>
+        <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
+    <?php endif; ?>
 
-    <p> 
-        <label for="isbn">ISBN</label><br> 
-        <input type="text" id="isbn" name="isbn"> 
-    </p>
+    <form id="form-plus" method="post" action="proses_add.php"> 
+        <p> 
+            <label for="title">Title</label><br> 
+            <input type="text" id="title" name="title" required>
+        </p>
 
-    <p> 
-        <label for="stock">Stock</label><br> 
-        <input type="number" id="stock" name="stock" min="0" required> 
-    </p>
+        <p> 
+            <label for="author">Author</label><br> 
+            <input type="text" id="author" name="author" required> 
+        </p>
 
-    <p> 
-        <label for="category">Category</label><br>
-        <select id="category" name="category"> 
-            <option value="fiction">Fiction</option> 
-            <option value="non-fiction">Non-Fiction</option> 
-            <option value="reference"> Reference</option> 
-        </select> 
-    </p>
+        <p> 
+            <label for="year">Year</label><br> 
+            <input type="number" id="year" name="year" min="1900" max="2026" required> 
+        </p>
 
-    <p> 
-        <button type="submit">Save</button> 
-    </p>
-</form>
+        <p> 
+            <label for="isbn">ISBN</label><br> 
+            <input type="text" id="isbn" name="isbn"> 
+        </p>
+
+        <p> 
+            <label for="stock">Stock</label><br> 
+            <input type="number" id="stock" name="stock" min="0" required> 
+        </p>
+
+        <p> 
+            <label for="category">Category</label><br>
+            <select id="category" name="category"> 
+                <option value="fiction">Fiction</option> 
+                <option value="non-fiction">Non-Fiction</option> 
+                <option value="reference">Reference</option> 
+            </select> 
+        </p>
+
+        <p> 
+            <button type="submit">Save</button> 
+        </p>
+    </form>
+</section>
+
+<?php include __DIR__ . '/../includes/footer.php'; ?>

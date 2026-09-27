@@ -17,6 +17,9 @@ if ($pengarang === '') {
 if (!is_numeric($tahun) || $tahun < 1900 || $tahun > 2026) {
     $errors[] = "The year must be between 1900-2026.";
 }
+if ($isbn !== '' && !preg_match('/^[0-9\-]+$/', $isbn)) {
+    $errors[] = "ISBN must contain only numbers and hyphens.";
+}
 if (!is_numeric($stok) || $stok < 0) {
     $errors[] = "Stock must not be negative.";
 }
@@ -42,5 +45,3 @@ $_SESSION['flash'] = ['type' => 'success', 'message' => 'Books successfully adde
 header('Location: list.php');
 exit;
 
-$flash = $_SESSION['flash'] ?? null;
-unset($_SESSION['flash']);
