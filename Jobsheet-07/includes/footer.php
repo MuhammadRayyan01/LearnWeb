@@ -10,7 +10,7 @@
     endif; ?>
     <?php if ($flash): ?>
     <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
-<?php endif; ?>
+    <?php endif; ?>
 
 </body>
 </html>

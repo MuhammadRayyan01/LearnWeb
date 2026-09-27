@@ -20,7 +20,7 @@ unset($_SESSION['flash']);
         </p>
 
         <p> 
-            <label for="member_no">Member_no</label><br> 
+            <label for="member_no">Member number</label><br> 
             <input type="text" id="member_no" name="member_no" required> 
         </p>
 

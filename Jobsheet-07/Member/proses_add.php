@@ -1,7 +1,7 @@
 <?php
 session_start();
 $name = trim($_POST['name'] ?? '');
-$no_anggota = trim($_POST['member_no'] ?? '');
+$member_no = trim($_POST['member_no'] ?? '');
 $address = trim($_POST['address'] ?? '');
 $phone= $_POST['phone'] ?? '';
 
