@@ -41,3 +41,6 @@ $_SESSION['book'][] = [
 $_SESSION['flash'] = ['type' => 'success', 'message' => 'Books successfully added.'];
 header('Location: list.php');
 exit;
+
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);

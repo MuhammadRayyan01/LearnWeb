@@ -8,6 +8,9 @@
     <script src="<?php echo $src; ?>"></script>
     <?php endforeach;
     endif; ?>
-    
+    <?php if ($flash): ?>
+    <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
+<?php endif; ?>
+
 </body>
 </html>
