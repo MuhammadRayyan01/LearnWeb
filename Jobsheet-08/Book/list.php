@@ -1,3 +1,6 @@
+<?require __DIR__ . '/includes/koneksi.php';?>
+
+
 <! DOCTYPE html>
 <html lang="id">
 <head> 

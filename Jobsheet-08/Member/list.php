@@ -1,3 +1,5 @@
+<?require __DIR__ . '/includes/koneksi.php';?>
+
 <?php
 $page_title = "Member List";
 include __DIR__ . '/../includes/header.php';

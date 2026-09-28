@@ -1,3 +1,5 @@
+<?require __DIR__ . '/includes/koneksi.php';?>
+
 <?php
 session_start();
 $name = trim($_POST['name'] ?? '');

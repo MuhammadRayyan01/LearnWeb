@@ -57,3 +57,4 @@ unset($_SESSION['flash']);
 </section>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
+<?require __DIR__ . '/includes/koneksi.php';?>
