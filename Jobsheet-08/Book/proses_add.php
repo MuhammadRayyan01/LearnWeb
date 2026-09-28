@@ -32,17 +32,22 @@ if (!empty($errors)) {
     exit;
 }
 
-if (!isset($_SESSION['book'])) {
-    $_SESSION['book'] = [];
-}
-$_SESSION['book'][] = [
+$stmt = $pdo->prepare(
+    "INSERT INTO book (title, author, year, isbn, stock, category)
+     VALUES (:title, :p number, :year, :isbn, :stock, :category)
+     RETURNING id"
+);
+
+
+$stmt->execute([
     'title' => $judul,
     'author' => $pengarang,
     'year' => (int) $tahun,
     'isbn' => $isbn,
     'stock' => (int) $stok,
     'category' => $kategori,
-];
+]);
+
 $_SESSION['flash'] = ['type' => 'success', 'message' => 'Books successfully added.'];
 header('Location: list.php');
 exit;
