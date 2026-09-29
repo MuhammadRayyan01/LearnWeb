@@ -16,17 +16,18 @@ dynamically rendered via fetch (see buku.js/anggota.js) so that
 The .btn-delete button is not necessarily present when DOMContentLoaded.*/
 
 function initHapusConfirm() {
-    document.addEventListener("click", function (e) {
-        const btn = e.target.closest(".btn-delete");
-        if (!btn) return;
-        const row = btn.closest("tr");
+    document.addEventListener("submit", function (e) {
+        const form = e.target;
+        if (!form.classList.contains("form-hapus")) return;
+        const row = form.closest("tr");
         const name = row ? row.querySelector("td")?. textContent : "this data";
         const sure = confirm("Sure wants to delete \"" + name + "\"?");
-        if (yakin && row) {
-            row.remove();
+        if (!sure) {
+            e.preventDefault();
         }
     });
 }
+
 
 
 // ===== Filter/pencarian tabel real-time =====
