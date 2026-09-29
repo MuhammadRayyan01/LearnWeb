@@ -2,7 +2,6 @@
 $page_title = "Add Book";
 include __DIR__ . '/../includes/header.php';
 
-// Menangkap flash message (error) dari proses_add.php
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 ?>
@@ -10,7 +9,6 @@ unset($_SESSION['flash']);
 <section>
     <h2>Add New Book</h2>
     
-    <!-- Blok ini wajib ada agar pesan error berwarna merah bisa muncul -->
     <?php if ($flash): ?>
         <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
     <?php endif; ?>
@@ -57,4 +55,3 @@ unset($_SESSION['flash']);
 </section>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
-<?require __DIR__ . '/includes/koneksi.php';?>

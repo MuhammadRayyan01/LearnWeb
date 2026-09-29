@@ -1,7 +1,7 @@
-<?require __DIR__ . '/includes/koneksi.php';?>
-
 <?php
 session_start();
+require __DIR__ . '/../includes/koneksi.php';
+
 $judul = trim($_POST['title'] ?? '');
 $pengarang = trim($_POST['author'] ?? '');
 $tahun = $_POST['year'] ?? '';
@@ -34,21 +34,18 @@ if (!empty($errors)) {
 
 $stmt = $pdo->prepare(
     "INSERT INTO book (title, author, year, isbn, stock, category)
-     VALUES (:title, :p number, :year, :isbn, :stock, :category)
-     RETURNING id"
+     VALUES (:title, :author, :year, :isbn, :stock, :category)"
 );
 
-
 $stmt->execute([
-    'title' => $judul,
-    'author' => $pengarang,
-    'year' => (int) $tahun,
-    'isbn' => $isbn,
-    'stock' => (int) $stok,
+    'title'    => $judul,
+    'author'   => $pengarang,
+    'year'     => (int) $tahun,
+    'isbn'     => $isbn,
+    'stock'    => (int) $stok,
     'category' => $kategori,
 ]);
 
 $_SESSION['flash'] = ['type' => 'success', 'message' => 'Books successfully added.'];
 header('Location: list.php');
 exit;
-

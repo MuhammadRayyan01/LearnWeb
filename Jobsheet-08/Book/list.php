@@ -1,23 +1,14 @@
-<?require __DIR__ . '/includes/koneksi.php';?>
-
-
-<! DOCTYPE html>
-<html lang="id">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Home</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-    <script src="../assets/js/app.js"></script>
-    
 <?php
 $page_title = "Book List";
 include __DIR__ . '/../includes/header.php';
+
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
-$daftarBuku = $_SESSION['book'] ?? [];
+
+require __DIR__ . '/../includes/koneksi.php';
+$daftarBuku = $pdo->query("SELECT * FROM book ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
 ?>
+<main>
 <section>
     <h2>Book List</h2>
     <?php if ($flash): ?>
@@ -41,28 +32,27 @@ $daftarBuku = $_SESSION['book'] ?? [];
                 </tr>
             </thead>
             <tbody>
-                <!-- Perbaikan: Gunakan $daftarBuku agar sesuai dengan variabel di atas -->
                 <?php if (empty($daftarBuku)): ?>
                 <tr>
                     <td colspan="5">There is no book data yet. Please add it via the "Add Books" menu.</td>
                 </tr>
                 <?php else: ?>
-                    <!-- Perbaikan: Gunakan kata kunci 'as' -->
-                    <?php foreach ($daftarBuku as $book): ?>
-                    <tr>
-                        <td><?php echo $book['title']; ?></td>
-                        <td><?php echo $book['author']; ?></td>
-                        <td><?php echo $book['year']; ?></td>
-                        <td><?php echo $book['stock']; ?></td>
-                        <td>
-                            <button type="button">Edit</button>
-                            <button type="button" class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
+                    <?php foreach ($daftarBuku as $buku): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($buku['title']); ?></td>
+                    <td><?php echo htmlspecialchars($buku['author']); ?></td>
+                    <td><?php echo htmlspecialchars($buku['year']); ?></td>
+                    <td><?php echo htmlspecialchars($buku['stock']); ?></td>
+                    <td>
+                        <button type="button">Edit</button>
+                        <button type="button" class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
                 <?php endif; ?>
             </tbody>
         </table>
     </div>
 </section>
+
 <?php include __DIR__ . '/../includes/footer.php'; ?>

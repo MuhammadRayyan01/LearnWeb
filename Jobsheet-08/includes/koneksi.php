@@ -8,6 +8,5 @@ try {
     $pdo = new PDO("pgsql:host=$host; port=$port; dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    the("Koneksi database gagal: " . $e->getMessage());
+    die("Koneksi database gagal: " . $e->getMessage());
 }
-require __DIR__ . '/includes/koneksi.php';

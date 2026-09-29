@@ -6,13 +6,13 @@ $__rel = ltrim(str_replace('\\', '/', substr($__scriptDir, strlen($__jobsheetRoo
 $base = $__rel === '' ? '' : str_repeat('../', substr_count($__rel, '/') + 1);
 ?>
 
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html only="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIMPUS-Mini<?php echo isset($page_title) ? ' | ' . $page_title : ''; ?></title>
-    <link rel="stylesheet" href="<?php echo $base; ?>../assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $base; ?>/../../assets/css/style.css">
 </head>
 <body>
     <header>
