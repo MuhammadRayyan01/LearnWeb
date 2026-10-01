@@ -8,34 +8,34 @@ unset($_SESSION['flash']);
 
 <section>
     <h2>Add New Member</h2>
-    
+
     <?php if ($flash): ?>
-        <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
+        <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo htmlspecialchars($flash['message']); ?></p>
     <?php endif; ?>
 
-    <form id="form-plus" method="post" action="proses_add.php"> 
-        <p> 
-            <label for="name">Name</label><br> 
-            <input type="text" id="name" name="name" required>
+    <form id="form-plus" method="post" action="proses_add.php">
+        <p>
+            <label for="nama">Name</label><br>
+            <input type="text" id="nama" name="nama" required>
         </p>
 
-        <p> 
-            <label for="member_no">Member number</label><br> 
-            <input type="text" id="member_no" name="member_no" required> 
+        <p>
+            <label for="no_anggota">Member number</label><br>
+            <input type="text" id="no_anggota" name="no_anggota" required>
         </p>
 
-        <p> 
-            <label for="address">Address</label><br> 
-            <input type="text" id="address" name="address" required> 
+        <p>
+            <label for="alamat">Address</label><br>
+            <input type="text" id="alamat" name="alamat" required>
         </p>
 
-        <p> 
-            <label for="phone">No. HP</label><br> 
-            <input type="text" id="phone" name="phone" required> 
+        <p>
+            <label for="no_hp">No. HP</label><br>
+            <input type="text" id="no_hp" name="no_hp" required>
         </p>
 
-        <p> 
-            <button type="submit">Save</button> 
+        <p>
+            <button type="submit">Save</button>
         </p>
     </form>
 </section>
