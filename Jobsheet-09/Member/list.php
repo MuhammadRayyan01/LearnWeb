@@ -73,10 +73,10 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                 <?php else: ?>
                     <?php foreach ($memberList as $member): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($member['member_no']); ?></td>
-                        <td><?php echo htmlspecialchars($member['name']); ?></td>
-                        <td><?php echo htmlspecialchars($member['address']); ?></td>
-                        <td><?php echo htmlspecialchars($member['phone']); ?></td>
+                        <td><?php echo htmlspecialchars($member['no_anggota']); ?></td>
+                        <td><?php echo htmlspecialchars($member['nama']); ?></td>
+                        <td><?php echo htmlspecialchars($member['alamat']); ?></td>
+                        <td><?php echo htmlspecialchars($member['no_hp']); ?></td>
                         <td>
                             <a href="edit.php?id=<?php echo (int) $member['id']; ?>" class="btn-edit">Edit</a>
 
