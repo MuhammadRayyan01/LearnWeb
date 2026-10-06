@@ -68,18 +68,18 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                     <td colspan="5">There is no book data yet. Please add it via the "Add Books" menu.</td>
                 </tr>
                 <?php else: ?>
-                    <?php foreach ($daftarBuku as $buku): ?>
+                    <?php foreach ($daftarBuku as $book): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($buku['title']); ?></td>
-                    <td><?php echo htmlspecialchars($buku['author']); ?></td>
-                    <td><?php echo htmlspecialchars($buku['year']); ?></td>
-                    <td><?php echo htmlspecialchars($buku['stock']); ?></td>
+                    <td><?php echo htmlspecialchars($book['title']); ?></td>
+                    <td><?php echo htmlspecialchars($book['author']); ?></td>
+                    <td><?php echo htmlspecialchars($book['year']); ?></td>
+                    <td><?php echo htmlspecialchars($book['stock']); ?></td>
                     <td>
                         <!-- Updated Edit button to link to edit.php[cite: 1] -->
-                        <a href="edit.php?id=<?php echo $buku['id']; ?>" class="btn-edit">Edit</a>
+                        <a href="edit.php?id=<?php echo $book['id']; ?>" class="btn-edit">Edit</a>
                         
-                        <form class="form-hapus" method="post" action="hapus.php" style="display:inline;"> 
-                            <input type="hidden" name="id" value="<?php echo $buku['id']; ?>">
+                        <form class="form-hapus" method="post" action="delete.php" style="display:inline;"> 
+                            <input type="hidden" name="id" value="<?php echo $book['id']; ?>">
                             <button type="submit" class="btn-delete">Delete</button> 
                         </form>
                     </td>
