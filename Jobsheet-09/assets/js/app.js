@@ -74,3 +74,6 @@ function initValidasiForm() {
         }
     });
 }
+document.addEventListener("DOMContentLoaded", function() {
+    initHapusConfirm();
+});
