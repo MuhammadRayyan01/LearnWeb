@@ -1,7 +1,6 @@
 <?php
-//Guard clause: included in the top row of each page
-//requires login (before header.php output any output),
-//so that the header('Location: ...') can still be called.
+// Guard clause: di-require di baris paling atas halaman yang butuh login
+// (sebelum header.php mencetak output), supaya header('Location: ...') masih bisa dipanggil.
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

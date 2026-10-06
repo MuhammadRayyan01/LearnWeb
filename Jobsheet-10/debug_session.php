@@ -1,14 +1,6 @@
 <?php
-$page_title = "Add Member";
-include __DIR__ . '/../includes/header.php';
-
-$flash = $_SESSION['flash'] ?? null;
-unset($_SESSION['flash']);
-?>
-
-<?php
-// session_start() is mandatory before you can read or write to $_SESSION
-session_start();
+// session_start() wajib dipanggil sebelum membaca $_SESSION
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 ?>
 <!DOCTYPE html>
 <html lang="id">

@@ -1,8 +1,3 @@
-<?php if (!empty($extra_scripts)): foreach ($extra_scripts as $src): ?>
-<script src="<?php echo $src; ?>"></script>
-<?php endforeach;
-endif; ?>
-
 <?php
 $page_title = "Home";
 include __DIR__ . '/includes/header.php';
@@ -29,7 +24,3 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
-<?require __DIR__ . '/includes/koneksi.php';?>
-
-
-

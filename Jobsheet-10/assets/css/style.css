@@ -328,3 +328,14 @@ td form.form-hapus {
     color: #fff;
     cursor: pointer;
 }
+/*authority */
+.auth-status {
+    display: flex;
+    align-items: center;
+    Gap: 0.75rem;
+    color: #fff;
+}
+.auth-status a {
+    color: #fff;
+    text-decoration: underline;
+}
