@@ -37,16 +37,14 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
 <section>
     <h2>Book List</h2>
     <?php if ($flash): ?>
-        <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
-    <?php endif; ?>
-    
+        <p class="flash flash-<?php echo e($flash['type']); ?>"><?php echo e($flash['message']); ?></p>    <?php endif; ?>
+
     <!-- Point 5.8: Updated Search Form with method="get"[cite: 1] -->
     <div class="search-box">
         <form method="get" action="list.php">
             <span>
                 <label for="search-input">Search Book Title</label><br>
-                <input type="text" id="search-input" name="q" value="<?php echo htmlspecialchars($keyword); ?>" placeholder="Type book title...">
-            </span>
+            <input type="text" id="search-input" name="q" value="<?php echo e($keyword); ?>" placeholder="Type book title...">            </span>
             <button type="submit">Search</button>
         </form>
     </div>
@@ -70,16 +68,15 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                 <?php else: ?>
                     <?php foreach ($daftarBuku as $book): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($book['title']); ?></td>
-                    <td><?php echo htmlspecialchars($book['author']); ?></td>
+                    <td><?php echo e($book['title']); ?></td>
+                    <td><?php echo e($book['author']); ?></td>                    
                     <td><?php echo htmlspecialchars($book['year']); ?></td>
                     <td><?php echo htmlspecialchars($book['stock']); ?></td>
                     <td>
                         <!-- Updated Edit button to link to edit.php[cite: 1] -->
-                        <a href="edit.php?id=<?php echo $book['id']; ?>" class="btn-edit">Edit</a>
-                        
+                        <a href="edit.php?id=<?php echo (int) $book['id']; ?>" class="btn-edit">Edit</a>                        
                         <form class="form-hapus" method="post" action="delete.php" style="display:inline;"> 
-                            <input type="hidden" name="id" value="<?php echo $book['id']; ?>">
+                            <input type="hidden" name="id" value="<?php echo (int) $book['id']; ?>">
                             <button type="submit" class="btn-delete">Delete</button> 
                         </form>
                     </td>
