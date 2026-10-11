@@ -6,6 +6,11 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require __DIR__ . '/../includes/koneksi.php';
+require __DIR__ . '/../includes/csrf.php';
+require __DIR__ . '/../includes/koneksi.php';
+
+// Panggil csrf_verify() di sini, sebelum memproses data $_POST atau database
+csrf_verify();
 
 // 1. Ambil data ID
 $id = $_POST['id'] ?? null;

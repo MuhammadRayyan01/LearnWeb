@@ -1,6 +1,10 @@
 <?php
-session_start();
+require __DIR__ . '/../includes/auth.php';
+require __DIR__ . '/../includes/csrf.php';
 require __DIR__ . '/../includes/koneksi.php';
+
+// Panggil csrf_verify() di sini, sebelum memproses data $_POST atau database
+csrf_verify();
 
 $judul = trim($_POST['title'] ?? '');
 $pengarang = trim($_POST['author'] ?? '');
