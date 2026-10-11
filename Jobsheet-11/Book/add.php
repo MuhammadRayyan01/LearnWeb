@@ -18,7 +18,8 @@ unset($_SESSION['flash']);
         <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
     <?php endif; ?>
 
-    <form id="form-plus" method="post" action="proses_add.php"> 
+    <form id="form-plus" method="post" action="proses_add.php">
+         <?php echo csrf_field(); ?>
         <p> 
             <label for="title">Title</label><br> 
             <input type="text" id="title" name="title" required>

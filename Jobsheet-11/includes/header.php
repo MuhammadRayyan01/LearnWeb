@@ -2,6 +2,10 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+// Panggil helpers.php (fungsi e()) dan csrf.php
+require_once __DIR__ . '/helpers.php';
+require_once __DIR__ . '/csrf.php';
+
 $sudahLogin = isset($_SESSION['user_id']);
 
 $__root = realpath(__DIR__ . '/..');
